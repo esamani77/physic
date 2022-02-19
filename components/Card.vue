@@ -1,13 +1,20 @@
 <template>
-  <div class="grid grid-cols-3 gap-4">
-    <div v-for="item in 9" :key="item">
-      <Item></Item>
+  <div class="flex flex-row-reverse flex-wrap w-full">
+    <div v-for="item in store.lessons" :key="item" class="mt-8 w-4/12 px-2">
+      <Item dir="rtl" class="" :item="item"></Item>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { useCounter } from "@/store";
+export default {
+  data() {
+    return {
+      store: useCounter(),
+    };
+  },
+};
 </script>
 
 <style></style>
