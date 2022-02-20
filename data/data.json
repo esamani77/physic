@@ -2,7 +2,14 @@
   {
     "name": "فصل اول",
     "description": "سلام",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
+        "params": [{ "x": "", "y": "" }],
+        "result": "",
+        "formula": "sum"
+      }
+    ]
   },
   {
     "name": "فصل دوم",
