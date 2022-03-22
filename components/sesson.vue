@@ -22,12 +22,20 @@
           v-model="param.value"
           class="border border-gray-300 bg-orange-200"
         />
+        : {{ param.value }}
       </div>
+      <button
+        @click="calculate(formulaIndex)"
+        class="border border-gray-500 bg-red-200 p-4 m-4"
+      >
+        calculate
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import { evaluate, log } from "mathjs";
 import { useCounter } from "@/store";
 export default {
   data() {
@@ -42,7 +50,6 @@ export default {
     inputs() {
       let data = this.store.lessons[this.index].formulas,
         inputs = [];
-      console.log(data);
       data.forEach((el, foreachIndex) => {
         console.log(foreachIndex, el.formula);
         let specialFormula = el.formula,
@@ -61,15 +68,30 @@ export default {
           }
         }
       });
-      console.log(inputs);
       let formuls = [];
       inputs.forEach((el, idx) => {
         formuls.push([]);
         for (let key in el) {
-          formuls[idx].push({ key: key, value: "" });
+          formuls[idx].push({ key: key, value: 1 });
         }
       });
       return formuls;
+    },
+  },
+  mounted() {
+    console.log("sqrtsqrtsqrt", evaluate("2 *2"));
+  },
+  methods: {
+    calculate(formulaIndex) {
+      let data = this.store.lessons[this.index].formulas[formulaIndex];
+      let result = data.formula;
+      this.inputs[formulaIndex].forEach((el) => {
+        result = result.replaceAll(el.key, el.value);
+        console.log(result, el.key, el.value);
+      });
+
+      data.result = evaluate(result);
+      console.log(result, data.result);
     },
   },
 };
