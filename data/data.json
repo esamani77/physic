@@ -7,7 +7,14 @@
         "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
         "params": [{ "x": "", "y": "" }],
         "result": "",
-        "formula": "sum"
+        "formula": "var1 * cos(var3) + var1 * sin(var2) "
+      },
+      {
+        "name": "نمایش بردار توسط مولفه‌های قطبی در دستگاه دکارتی",
+        "params": "/r * cos",
+        "result": "",
+        "img": "https://s6.uupload.ir/files/season1_qya5.jpg",
+        "formula": "var1 * cos(var2) + var1 * sin(var2) "
       }
     ]
   },
