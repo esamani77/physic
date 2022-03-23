@@ -28,7 +28,7 @@
         @click="calculate(formulaIndex)"
         class="border border-gray-500 bg-red-200 p-4 m-4"
       >
-        calculate
+        calculate {{ formula.result }}
       </button>
     </div>
   </div>
