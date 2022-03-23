@@ -13,8 +13,9 @@
       <h4>
         {{ formula.name }}
       </h4>
+      <p>{{ formula.formula }}</p>
       <div class="mt-5" v-for="(param, idx) in inputs[formulaIndex]" :key="idx">
-        <label :for="param.key">{{ param.key }}</label>
+        <label :for="param.key">{{ param.key }}: </label>
         <input
           type="number"
           :name="param.key"
@@ -22,7 +23,6 @@
           v-model="param.value"
           class="border border-gray-300 bg-orange-200"
         />
-        : {{ param.value }}
       </div>
       <button
         @click="calculate(formulaIndex)"
