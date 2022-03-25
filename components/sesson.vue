@@ -1,7 +1,10 @@
 <template>
   <div class="bg-gray-100 rounded-xl p-8">
-    <p class="text-lg font-semibold text-right">
-      {{ inputs }}
+    <h3 class="text-lg font-semibold text-right">
+      {{ store.lessons[index].name }}
+    </h3>
+    <p class="text-md font-semibold text-right">
+      {{ store.lessons[index].description }}
     </p>
   </div>
   <div class="text-right m-5" dir="rtl">
@@ -13,9 +16,9 @@
       <h4>
         {{ formula.name }}
       </h4>
-      <p>{{ formula.formula }}</p>
+      <p>{{ formula.formula.replaceAll(/var/g, "") }}</p>
       <div class="mt-5" v-for="(param, idx) in inputs[formulaIndex]" :key="idx">
-        <label :for="param.key">{{ param.key }}: </label>
+        <label :for="param.key">{{ param.key.replace("var", "") }}: </label>
         <input
           type="number"
           :name="param.key"
@@ -28,7 +31,7 @@
         @click="calculate(formulaIndex)"
         class="border border-gray-500 bg-red-200 p-4 m-4"
       >
-        calculate {{ formula.result }}
+        محاسبه {{ formula.result }}
       </button>
     </div>
   </div>
@@ -51,7 +54,6 @@ export default {
       let data = this.store.lessons[this.index].formulas,
         inputs = [];
       data.forEach((el, foreachIndex) => {
-        console.log(foreachIndex, el.formula);
         let specialFormula = el.formula,
           regex = new RegExp(/var/gm);
         inputs.push({});
@@ -78,20 +80,15 @@ export default {
       return formuls;
     },
   },
-  mounted() {
-    console.log("sqrtsqrtsqrt", evaluate("2 *2"));
-  },
+
   methods: {
     calculate(formulaIndex) {
       let data = this.store.lessons[this.index].formulas[formulaIndex];
       let result = data.formula;
       this.inputs[formulaIndex].forEach((el) => {
         result = result.replaceAll(el.key, el.value);
-        console.log(result, el.key, el.value);
       });
-
       data.result = evaluate(result);
-      console.log(result, data.result);
     },
   },
 };

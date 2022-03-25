@@ -5,13 +5,11 @@
     "formulas": [
       {
         "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
-        "params": [{ "x": "", "y": "" }],
         "result": "",
         "formula": "var1 * cos(var3) + var1 * sin(var2) "
       },
       {
         "name": "نمایش بردار توسط مولفه‌های قطبی در دستگاه دکارتی",
-        "params": "/r * cos",
         "result": "",
         "img": "https://s6.uupload.ir/files/season1_qya5.jpg",
         "formula": "var1 * cos(var2) + var1 * sin(var2) "
@@ -21,17 +19,61 @@
   {
     "name": "فصل دوم",
     "description": "سلام و درد",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "شتاب مکان حرکت دو بعدی",
+        "result": "",
+        "formula": "var1/2 * var2* var2 + var3 * var2 + var4"
+      },
+      {
+        "name": "زمان کل سفوط",
+
+        "result": "",
+        "formula": "2 * varV * sin(varT) / 9.8"
+      },
+      {
+        "name": "ارتفاع اوج",
+        "result": "",
+        "formula": "varV * varV * sin(varT) * sin(varT) / 2 * 9.8"
+      },
+      {
+        "name": "حرکت دایره ای",
+        "result": "",
+        "formula": "varr * varO"
+      }
+    ]
   },
   {
     "name": "فصل سوم",
     "description": "سلام و درد",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "نیرو گرانش",
+        "result": "",
+        "formula": "varm * varg * sin(varT)"
+      }
+    ]
   },
   {
     "name": "فصل چهارم",
     "description": "سلام",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "نیرو اصطکاک ایستایی",
+        "result": "",
+        "formula": "varm * varn "
+      },
+      {
+        "name": "نیرو اصطکاک لغزشی",
+        "result": "",
+        "formula": "varm * varn "
+      },
+      {
+        "name": "نیرو مرکزگرا ",
+        "result": "",
+        "formula": "varm * varv * varv / varr "
+      }
+    ]
   },
   {
     "name": "فصل پنجم",
