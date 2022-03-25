@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     index() {
-      return parseFloat(this.$route.params.id - 1) || 0;
+      return parseFloat(this.$route.params.id) || 0;
     },
     inputs() {
       let data = this.store.lessons[this.index].formulas,

@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     navigate(index) {
-      this.$router.push(`./${index + 1}`);
+      this.$router.push(`./${index}`);
     },
   },
 };
