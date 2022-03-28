@@ -1,5 +1,10 @@
-<script lang="ts" setup>
+<script lang="ts">
 import "@/assets/css/main.css";
+export default {
+  head: {
+    title: "فیزیک",
+  },
+};
 </script>
 
 <template>
