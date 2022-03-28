@@ -2,26 +2,25 @@
   {
     "name": "پیش مقدمه",
     "title": "بردارها",
-    "description": "سلام",
+    "description": "بردارها کمیت‌هایی هستند با سه ویژگی ، این سه کمیت عبارتند از  بزرگی، راستا و جهت",
     "formulas": [
       {
         "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
         "result": "",
-        "formula": "var1 * cos(var3) + var1 * sin(var2) "
+        "formula": "varx * cos(varT) + varx * sin(varT) "
       },
       {
         "name": "نمایش بردار توسط مولفه‌های قطبی در دستگاه دکارتی",
         "result": "",
         "img": "https://s6.uupload.ir/files/season1_qya5.jpg",
-        "formula": "var1 * cos(var2) + var1 * sin(var2) "
+        "formula": "varx * cos(varT) + varx * sin(varT) "
       }
     ]
   },
   {
     "name": "فصل اول",
     "title": "حرکت یک بعدی",
-
-    "description": "سلام و درد",
+    "description": "سینماتیک فصلی است که حرکت را بدون توجه به عمل به وجود آورنده یعنی نیرو بررسی می‌کند",
     "formulas": [
       {
         "name": "شتاب مکان حرکت دو بعدی",
@@ -49,8 +48,7 @@
   {
     "name": "فصل دوم",
     "title": "حرکت دو بعدی",
-
-    "description": "سلام و درد",
+    "description": "فصل سوم درباره دینامیک صحبت می‌کند که حرکت جسم با توجه به عامل به وجود آورنده یعنی نیرو را بررسی می‌کند",
     "formulas": [
       {
         "name": "نیرو گرانش",
@@ -80,11 +78,5 @@
         "formula": "varm * varv * varv / varr "
       }
     ]
-  },
-  {
-    "name": "فصل چهارم",
-    "title": "نیروی اصطکاک و دینامیک دورانی",
-    "description": "سلام و درد",
-    "formulas": []
   }
 ]

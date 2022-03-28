@@ -7,7 +7,7 @@
       {{ store.lessons[index].description }}
     </p>
   </div>
-  <div class="grid grid-cols-3 gap-4 text-right m-5" dir="rtl">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-right m-5" dir="rtl">
     <div
       class="bg-gray-100 my-5 p-10 rounded-xl"
       v-for="(formula, formulaIndex) in store.lessons[index].formulas"

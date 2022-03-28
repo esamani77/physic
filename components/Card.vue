@@ -3,7 +3,7 @@
     <div
       v-for="(item, index) in store.lessons"
       :key="item"
-      class="mt-8 w-4/12 px-2"
+      class="mt-8 w-full md:w-4/12 px-2"
     >
       <Item dir="rtl" class="" :item="item" :index="index"></Item>
     </div>
@@ -18,7 +18,6 @@ export default {
       store: useCounter(),
     };
   },
-
 };
 </script>
 
