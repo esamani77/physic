@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         async: true,
       },
     ],
+    title: "فیزیک",
   },
   build: {
     postcss: {
