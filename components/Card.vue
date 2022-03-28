@@ -5,7 +5,7 @@
       :key="item"
       class="mt-8 w-4/12 px-2"
     >
-      <Item dir="rtl" class="" :item="item" @click="navigate(index)"></Item>
+      <Item dir="rtl" class="" :item="item" :index="index"></Item>
     </div>
   </div>
 </template>
@@ -18,11 +18,7 @@ export default {
       store: useCounter(),
     };
   },
-  methods: {
-    navigate(index) {
-      this.$router.push(`./${index}`);
-    },
-  },
+
 };
 </script>
 

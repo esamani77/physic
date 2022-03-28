@@ -1,38 +1,49 @@
 <template>
-  <div class="bg-gray-100 rounded-xl p-8">
+  <div class="bg-gray-100 p-8">
     <h3 class="text-lg font-semibold text-right">
-      {{ store.lessons[index].name }}
+      {{ store.lessons[index].name }} - {{ store.lessons[index].title }}
     </h3>
     <p class="text-md font-semibold text-right">
       {{ store.lessons[index].description }}
     </p>
   </div>
-  <div class="text-right m-5" dir="rtl">
+  <div class="grid grid-cols-3 gap-4 text-right m-5" dir="rtl">
     <div
-      class="border-gray-500"
+      class="bg-gray-100 my-5 p-10 rounded-xl"
       v-for="(formula, formulaIndex) in store.lessons[index].formulas"
       :key="formula.name"
     >
-      <h4>
+      <h4 class="text-lg mb-4">
         {{ formula.name }}
       </h4>
-      <p>{{ formula.formula.replaceAll(/var/g, "") }}</p>
-      <div class="mt-5" v-for="(param, idx) in inputs[formulaIndex]" :key="idx">
-        <label :for="param.key">{{ param.key.replace("var", "") }}: </label>
+      <p class="italic oldstyle-nums font-black">
+        فرمول : {{ formula.formula.replaceAll(/var/g, "") }}
+      </p>
+      <div
+        class="mt-5 w-full"
+        v-for="(param, idx) in inputs[formulaIndex]"
+        :key="idx"
+      >
+        <label class="w-1/12" :for="param.key"
+          >{{ param.key.replace("var", "") }}:
+        </label>
         <input
           type="number"
           :name="param.key"
           :id="param.key"
           v-model="param.value"
-          class="border border-gray-300 bg-orange-200"
+          class="border border-gray-300 bg-orange-200 p-2 rounded w-full"
         />
       </div>
       <button
         @click="calculate(formulaIndex)"
-        class="border border-gray-500 bg-red-200 p-4 m-4"
+        class="bg-blue-200 p-4 my-5 rounded-xl w-full"
       >
-        محاسبه {{ formula.result }}
+        محاسبه
       </button>
+      <div class="text-center oldstyle-nums font-black text-2xl underline">
+        {{ formula.result }}
+      </div>
     </div>
   </div>
 </template>

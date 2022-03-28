@@ -2,7 +2,11 @@
 import "./assets/css/main.css";
 </script>
 <template>
-  <div>
+  <transition name="home" mode="out-in" tag="div">
     <NuxtPage />
-  </div>
+  </transition>
 </template>
+
+<style scoped>
+
+</style>
