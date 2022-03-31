@@ -33,7 +33,7 @@
       {
         "name": "ضرب خارجی دو بردار",
         "result": "",
-        "formula": "((vary * varz) - (varz * vary))i -  ((varx * varz) - (varz * varx))j + ((vax * vary) - (vary * varx))k"
+        "formula": "((vary * varc) - (varz * varb))i -  ((varx * varc) - (varz * vara))j + ((vax * varb) - (vary * varc))k"
       }
     ]
   },
