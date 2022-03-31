@@ -29,11 +29,6 @@
         "name": "ضرب داخلی دو بردار",
         "result": "",
         "formula": "vara * varb * cos(varT) "
-      },
-      {
-        "name": "ضرب خارجی دو بردار",
-        "result": "",
-        "formula": "((vary * varc) - (varz * varb))i -  ((varx * varc) - (varz * vara))j + ((vax * varb) - (vary * varc))k"
       }
     ]
   },
