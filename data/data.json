@@ -5,6 +5,16 @@
     "title": "بردارها",
     "formulas": [
       {
+        "name": "سرعت متوسط",
+        "result": "",
+        "formula": "(varx2 - varx1)/(vart2 - vart1)"
+      },
+      {
+        "name": "شتاب متوسط",
+        "result": "",
+        "formula": "(varv2 - varv1)/(vart2 - vart1)"
+      },
+      {
         "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
         "result": "",
         "formula": "varx * cos(varT) + varx * sin(varT) "
@@ -14,6 +24,11 @@
         "result": "",
         "img": "https://s6.uupload.ir/files/season1_qya5.jpg",
         "formula": "varx * cos(varT) + varx * sin(varT) "
+      },
+      {
+        "name": "ضرب داخلی دو بردار",
+        "result": "",
+        "formula": "vara * varb * cos(varT) "
       }
     ]
   },
@@ -50,6 +65,18 @@
     "title": "دینامیک",
     "formulas": [
       {
+        "name": "نیرو گرانش",
+        "params": [
+          {
+            "m": "",
+            "g": "",
+            "teta": ""
+          }
+        ],
+        "result": "",
+        "formula": "var1 * var2 * sin(var3)"
+      },
+      {
         "name": "نیرو اصطکاک ایستایی",
         "result": "",
         "formula": "varm * varn "
@@ -70,18 +97,91 @@
     "name": "فصل چهارم",
     "title": " کار و انرژی",
     "description": "فصل کار و انرژی است که درباره نیرو متغیر است، بر خلاف فصل دینامیک که درباره نیرو ثابت بود",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "نیرو فنر(قانون هوک)",
+        "result": "",
+        "formula": "vark * varx * (-1) "
+      },
+      {
+        "name": "کار نیروی ثابت",
+        "result": "",
+        "formula": "varf * vard * cos(teta) "
+      },
+      {
+        "name": "کار نیروی وزن",
+        "result": "",
+        "formula": "varm * varg * varh * cos(teta) "
+      },
+      {
+        "name": "کار نیرو اصطکاک لغزشی",
+        "result": "",
+        "formula": "varfk * vard "
+      },
+      {
+        "name": "کار نیروی فنر در حالت کشیدگی و فشردگی از نقطه مشخص",
+        "result": "",
+        "formula": "vark * vara * vara * (-1) / 2 "
+      },
+      {
+        "name": "کار نیروی فنر در حالت رهاسازی به سمت نقطه مشخص",
+        "result": "",
+        "formula": "vark * vara * vara /2 "
+      },
+      {
+        "name": "انرژی جنبشی",
+        "result": "",
+        "formula": "varm * varv * varv / 2 "
+      }
+    ]
   },
   {
     "title": "مرکز جرم و تکانه خطی",
     "name": "فصل پنجم",
     "description": "رفتار مرکز جرم بیانگر رفتار کلیت یک سیستم ذرات است. یعنی به جای اینکه حرکت تک تک ذرات سیستم را بررسی کنیم می‌توان حرکت مرکز جسم با جرمی معادل با جرم تمامی ذرات را در نظر گرفت",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "مرکز جرم سیستم دو ذره ای",
+        "result": "",
+        "formula": "((varm1*varx1)+(varm2*varx2))/(varm1+varm2)"
+      },
+      {
+        "name": "مرکز جرم سیستم دو ذره ای(فرمول دوم)",
+        "result": "",
+        "formula": "varm2/(varm1+varm2) * vard"
+      },
+      {
+        "name": "مرکز جرم سیستم مرکب",
+        "result": "",
+        "formula": "((varm1*varx1)+(varm2*varx2)+(varm3*varx3))/(varm1+varm2+varm3)"
+      },
+      {
+        "name": "تکانه خطی",
+        "result": "",
+        "formula": "varm * varv"
+      }
+    ]
   },
   {
     "title": "چرخش",
     "name": "فصل ششم",
     "description": "فصل چرخش راجع‌به  حرکات دایره‌ای و بررسی حرکت، سرعت، شتاب و انرژی در آن می‌پردازد ",
-    "formulas": []
+    "formulas": [
+      {
+        "name": "سرعت زاویه ای",
+        "result": "",
+        "formula": "(vartt2 - vartt1)/(vart2 - vart1)"
+      },
+      {
+        "name": "شتاب زاویه ای",
+        "result": "",
+        "formula": "(varo2 - varo1)/(vart2 - vart1)"
+      },
+      {
+        "name": "لختی دورانی یا ممان اینرسی",
+        "result": "",
+        "formula": "vari * varo * varo / 2"
+      }
+    ]
   }
 ]

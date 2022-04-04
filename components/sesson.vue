@@ -17,7 +17,7 @@
         {{ formula.name }}
       </h4>
       <p class="italic oldstyle-nums font-black">
-        فرمول : {{ formula.formula.replaceAll(/var/g, "") }}
+        فرمول : <span dir="ltr >  {{ formula.formula.replaceAll(/var/g, "") }} </span>
       </p>
       <div
         class="mt-5 w-full"
