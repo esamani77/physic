@@ -70,13 +70,23 @@ export default {
         inputs.push({});
         for (let idx in specialFormula) {
           let index = parseInt(idx);
+
           let word =
             specialFormula[index] +
             specialFormula[index + 1] +
             specialFormula[index + 2];
 
           if (regex.test(word)) {
-            let key = word + specialFormula[index + 3];
+            let key = word;
+
+            let resutl = specialFormula.substring(index + 3);
+            for (let d_idx in resutl) {
+              if (resutl[d_idx] === " " || resutl[d_idx] === ")") {
+                break;
+              }
+              key = key + resutl[d_idx];
+            }
+
             inputs[foreachIndex] = { ...inputs[foreachIndex], [key]: "" };
           }
         }

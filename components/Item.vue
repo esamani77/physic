@@ -6,11 +6,14 @@
     <p class="text-md mt-1 font-semibold">
       {{ item.title }}
     </p>
-    <img
-      @click="navigate(index)"
-      class="arrow-left"
-      src="./../assets/icons/arrow.png"
-    />
+
+    <span class="icon" @click="navigate(index)">
+      <svg viewBox="0 0 500 500">
+        <path
+          d="M357,214v-64a9,9 0 01 15-5l106,96.5a9.5,9.5 0 01 0,15.5l-106,96.5a9,9 0 01-15-5v-64h-348a9,9 0 01 -9-9v-52.5a9,9 0 01 9-9z"
+        ></path>
+      </svg>
+    </span>
   </div>
 </template>
 
@@ -25,12 +28,23 @@ export default {
 };
 </script>
 <style scoped>
-.arrow-left {
+.icon {
+  flex: 0 0 auto;
+  padding: 5px;
+  display: block;
+  fill: #000;
+  stroke: #000;
+  transform: rotate(180deg);
   cursor: pointer;
-  width: 25px;
-  height: 25px;
   position: absolute;
   bottom: 10px;
   left: 20px;
+}
+
+.icon svg {
+  --size: 25px;
+  fill: inherit;
+  height: var(--size);
+  width: var(--size);
 }
 </style>

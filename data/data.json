@@ -25,7 +25,7 @@
       {
         "name": "شتاب مکان حرکت دو بعدی",
         "result": "",
-        "formula": "var1 / 2 * var2* var2 + var3 * var2 + var4"
+        "formula": "var1 / 2 * var2 * var2 + var3 * var2 + var4"
       },
       {
         "name": "زمان کل سفوط",
