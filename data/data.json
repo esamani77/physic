@@ -66,13 +66,6 @@
     "formulas": [
       {
         "name": "نیرو گرانش",
-        "params": [
-          {
-            "m": "",
-            "g": "",
-            "teta": ""
-          }
-        ],
         "result": "",
         "formula": "var1 * var2 * sin(var3)"
       },
@@ -143,17 +136,17 @@
       {
         "name": "مرکز جرم سیستم دو ذره ای",
         "result": "",
-        "formula": "((varm1*varx1)+(varm2*varx2))/(varm1+varm2)"
+        "formula": "((varm1 * varx1 )+(varm2 * varx2 ))/(varm1 + varm2)"
       },
       {
         "name": "مرکز جرم سیستم دو ذره ای(فرمول دوم)",
         "result": "",
-        "formula": "varm2/(varm1+varm2) * vard"
+        "formula": "varm2 / ( varm1 + varm2 ) * vard"
       },
       {
         "name": "مرکز جرم سیستم مرکب",
         "result": "",
-        "formula": "((varm1*varx1)+(varm2*varx2)+(varm3*varx3))/(varm1+varm2+varm3)"
+        "formula": "(( varm1 * varx1 )+( varm2 * varx2 )+( varm3 * varx3 ))/( varm1 + varm2 + varm3)"
       },
       {
         "name": "تکانه خطی",
