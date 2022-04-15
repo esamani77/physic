@@ -27,24 +27,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.icon {
-  flex: 0 0 auto;
-  padding: 5px;
-  display: block;
-  fill: #000;
-  stroke: #000;
-  transform: rotate(180deg);
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-}
-
-.icon svg {
-  --size: 25px;
-  fill: inherit;
-  height: var(--size);
-  width: var(--size);
-}
-</style>

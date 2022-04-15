@@ -1,6 +1,15 @@
 <template>
   <div class="bg-gray-100 p-8">
-    <h3 class="text-lg font-semibold text-right">
+    <div class="relative py-4">
+      <span class="icon icon-left" @click="navigate()">
+        <svg viewBox="0 0 500 500">
+          <path
+            d="M357,214v-64a9,9 0 01 15-5l106,96.5a9.5,9.5 0 01 0,15.5l-106,96.5a9,9 0 01-15-5v-64h-348a9,9 0 01 -9-9v-52.5a9,9 0 01 9-9z"
+          ></path>
+        </svg>
+      </span>
+    </div>
+    <h3 class="text-lg font-semibold text-right pt-5">
       {{ store.lessons[index].name }} - {{ store.lessons[index].title }}
     </h3>
     <p class="text-md font-semibold text-right">
@@ -115,8 +124,19 @@ export default {
       });
       data.result = evaluate(result);
     },
+    navigate() {
+      this.$router.push(`./`);
+    },
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+.icon-left {
+  top: 10px !important;
+  bottom: 95% !important;
+  left: 95% !important;
+  /* right: 5% !important; */
+  transform: rotate(0) !important;
+}
+</style>
