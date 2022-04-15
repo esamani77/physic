@@ -16,6 +16,7 @@
       <h4 class="text-lg mb-4">
         {{ formula.name }}
       </h4>
+      <img :src="formula.img" class="w-full rounded-lg my-5 m-h-24" alt="" />
       <p class="italic oldstyle-nums font-black">
         فرمول :
         <span dir="ltr"> {{ formula.formula.replaceAll(/var/g, "") }} </span>
@@ -24,6 +25,7 @@
         class="mt-5 w-full"
         v-for="(param, idx) in inputs[formulaIndex]"
         :key="idx"
+        v-show="!Boolean(formula.disable)"
       >
         <label class="w-1/12" :for="param.key"
           >{{ param.key.replace("var", "") }}:
@@ -39,6 +41,7 @@
       <button
         @click="calculate(formulaIndex)"
         class="bg-blue-200 p-4 my-5 rounded-xl w-full"
+        v-if="!Boolean(formula.disable)"
       >
         محاسبه
       </button>

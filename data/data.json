@@ -8,19 +8,22 @@
         "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051200/1_1.png",
-        "formula": "varx * cos(varT) + varx * sin(varT) "
+        "formula": "varx * cos(varT) + varx * sin(varT) ",
+        "disable": "true"
       },
       {
         "name": "نمایش بردار توسط مولفه‌های قطبی در دستگاه دکارتی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051226/1_2.png",
-        "formula": "varx * cos(varT) + varx * sin(varT) "
+        "formula": "varx * cos(varT) + varx * sin(varT) ",
+        "disable": "true"
       },
       {
         "name": "ضرب داخلی دو بردار",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051242/1_3.png",
-        "formula": "vara * varb * cos(varT) "
+        "formula": "vara * varb * cos(varT) ",
+        "disable": "true"
       }
     ]
   },
