@@ -8,22 +8,21 @@
         "name": "نمایش بردار توسط مولفه‌های دستگاه دکارتی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051200/1_1.png",
-        "formula": "varx * cos(varT) + varx * sin(varT) ",
+        "formula": "varx * cos(varθ) + varx * sin(varθ) ",
         "disable": "true"
       },
       {
         "name": "نمایش بردار توسط مولفه‌های قطبی در دستگاه دکارتی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051226/1_2.png",
-        "formula": "varx * cos(varT) + varx * sin(varT) ",
+        "formula": "varx * cos(varθ) + varx * sin(varθ) ",
         "disable": "true"
       },
       {
         "name": "ضرب داخلی دو بردار",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051242/1_3.png",
-        "formula": "vara * varb * cos(varT) ",
-        "disable": "true"
+        "formula": "vara * varb * cos(varθ) "
       }
     ]
   },
@@ -36,13 +35,13 @@
         "name": "سرعت متوسط",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051250/2_1.png",
-        "formula": "(varx2 - varx1)/(vart2 - vart1)"
+        "formula": "(varx2 - varx1 ) / (vart2 - vart1)"
       },
       {
         "name": "شتاب متوسط",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051268/2_2.png",
-        "formula": "(varv2 - varv1)/(vart2 - vart1)"
+        "formula": "(varv2 - varv1 ) / ( vart2 - vart1)"
       },
       {
         "name": "شتاب مکان حرکت دو بعدی",
@@ -79,31 +78,31 @@
         "name": "نیرو گرانش افقی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051318/3_1.png",
-        "formula": "var1 * var2 * sin(var3)"
+        "formula": "varm * varg * sin(varθ)"
       },
       {
         "name": "نیرو گرانش عمودی",
         "result": "",
         "img": "https://s23.picofile.com/file/8449051326/3_2.png",
-        "formula": "var1 * var2 * cos(var3)"
+        "formula": "varm * varg * cos(varθ)"
       },
       {
         "name": "نیرو اصطکاک ایستایی",
         "result": "",
         "img": "https://s23.picofile.com/file/8449051334/3_3.png",
-        "formula": "varm * varn "
+        "formula": "varµs * varN "
       },
       {
         "name": "نیرو اصطکاک لغزشی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051342/3_4.png",
-        "formula": "varm * varn "
+        "formula": "varµk * varN "
       },
       {
         "name": "نیرو مرکزگرا ",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051350/3_5.png",
-        "formula": "varm * varr * varr / varv "
+        "formula": "varm * varr / varω2"
       }
     ]
   },
@@ -122,13 +121,13 @@
         "name": "کار نیروی ثابت",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051392/4_2.png",
-        "formula": "varf * vard * cos(teta) "
+        "formula": "varf * vard * cos(varθ) "
       },
       {
         "name": "کار نیروی وزن",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051400/4_3.png",
-        "formula": "varm * varg * varh * cos(teta) "
+        "formula": "varm * varg * varh * cos(varθ) "
       },
       {
         "name": "کار نیرو اصطکاک لغزشی",
