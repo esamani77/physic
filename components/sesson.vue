@@ -119,10 +119,21 @@ export default {
     calculate(formulaIndex) {
       let data = this.store.lessons[this.index].formulas[formulaIndex];
       let result = data.formula;
-      this.inputs[formulaIndex].forEach((el) => {
-        result = result.replaceAll(el.key, el.value);
+      let createFormula = [...this.inputs[formulaIndex]];
+
+      createFormula.forEach((el) => {
+        let value = this.createValue(el.value, el.key);
+        result = result.replaceAll(el.key, value);
       });
+
       data.result = evaluate(result);
+    },
+    createValue(value, key) {
+      if (key.includes("varθ")) {
+        var pi = Math.PI;
+        return value * (180 / pi);
+      }
+      return value;
     },
     navigate() {
       this.$router.push(`./`);
