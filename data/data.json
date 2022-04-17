@@ -47,25 +47,25 @@
         "name": "شتاب مکان حرکت دو بعدی",
         "result": "",
         "img": "https://s23.picofile.com/file/8449051276/2_3.png",
-        "formula": "var1 / 2 * var2 * var2 + var3 * var2 + var4"
+        "formula": "vara / 2 * vart * vart + varv0 * vart + varx0"
       },
       {
         "name": "زمان اوج ",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051284/2_4.png",
-        "formula": " varV * sin(varT) / 9.8"
+        "formula": " varV0 * sin(varθ) / 9.8"
       },
       {
         "name": "ارتفاع اوج",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051292/2_5.png",
-        "formula": "varV * varV * sin(varT) * sin(varT) / 2 * 9.8"
+        "formula": "varV0 * varV0 * sin(varθ) * sin(varθ) / 2 * 9.8"
       },
       {
         "name": "حرکت دایره ای",
         "result": "",
         "img": "https://s23.picofile.com/file/8449051300/2_6.png",
-        "formula": "varr * varO"
+        "formula": "varr * varω"
       }
     ]
   },
@@ -102,7 +102,7 @@
         "name": "نیرو مرکزگرا ",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051350/3_5.png",
-        "formula": "varm * varr / varω2"
+        "formula": "varm * varr * varω * varω"
       }
     ]
   },
@@ -133,7 +133,7 @@
         "name": "کار نیرو اصطکاک لغزشی",
         "result": "",
         "img": "https://s23.picofile.com/file/8449051418/4_4.png",
-        "formula": "varfk * vard "
+        "formula": "varfk * vard * (-1) "
       },
       {
         "name": "کار نیروی فنر در حالت کشیدگی و فشردگی از نقطه مشخص",
@@ -195,19 +195,19 @@
         "name": "سرعت زاویه ای",
         "result": "",
         "img": "https://s23.picofile.com/file/8449051518/6_1.png",
-        "formula": "(vartt2 - vartt1)/(vart2 - vart1)"
+        "formula": "(varθ2 - varθ1)/(vart2 - vart1)"
       },
       {
         "name": "شتاب زاویه ای",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051526/6_2.png",
-        "formula": "(varo2 - varo1)/(vart2 - vart1)"
+        "formula": "(varω2 - varω1)/(vart2 - vart1)"
       },
       {
         "name": "لختی دورانی یا ممان اینرسی",
         "result": "",
         "img": "https://s22.picofile.com/file/8449051534/6_3.png",
-        "formula": "vari * varo * varo / 2"
+        "formula": "varI * varω * varω / 2"
       }
     ]
   }
